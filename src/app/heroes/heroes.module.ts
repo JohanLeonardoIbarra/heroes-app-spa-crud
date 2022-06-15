@@ -11,7 +11,9 @@ import { BuscarComponent } from './pages/buscar/buscar.component';
 import { HeroeComponent } from './pages/heroe/heroe.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ListarComponent } from './pages/listar/listar.component';
-
+import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.component';
+import { ImagePipe } from './pipes/image.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,8 +21,16 @@ import { ListarComponent } from './pages/listar/listar.component';
     BuscarComponent,
     HeroeComponent,
     HomeComponent,
-    ListarComponent
+    ListarComponent,
+    HeroeTarjetaComponent,
+    ImagePipe,
   ],
-  imports: [CommonModule, HeroesRoutingModule, FlexLayoutModule, MaterialModule],
+  imports: [
+    CommonModule,
+    HeroesRoutingModule,
+    FormsModule,
+    FlexLayoutModule,
+    MaterialModule,
+  ],
 })
 export class HeroesModule {}

@@ -4,12 +4,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRouterModule } from './app-router.module';
+import { HttpClientModule } from '@angular/common/http';
 //Componentes
 import { ErrorComponent } from './shared/error/error.component';
 
 @NgModule({
   declarations: [AppComponent, ErrorComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, AppRouterModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    AppRouterModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
